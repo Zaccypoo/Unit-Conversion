@@ -15,7 +15,7 @@ function performConversion() {
   if (value === NaN || value === "" || value === null) {
     alert("Please enter a value to convert");
     return;
-  } else if (isNaN(parseInt(value))) {
+  } else if (isNaN(value)) {
     alert("Please enter a valid number");
     return;
   } else if (parseInt(value) === 0) {
@@ -49,6 +49,8 @@ function performConversion() {
     value
   ).toLocaleString()} pounds = ${poundsToKg.toLocaleString()} kilograms`;
 }
+
+console.log(parseInt("100p" * 7))
 
 // Event listeners
 convertBtn.addEventListener("click", performConversion);
